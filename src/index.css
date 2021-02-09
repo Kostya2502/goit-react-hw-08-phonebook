@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: #4aaec0;
+  background-image: url("./img/oblaka.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 code {
@@ -14,4 +20,62 @@ code {
 
 ul {
   list-style: none;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.listItem {
+  margin-right: 20px;
+}
+.listItem:last-child {
+  margin-right: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.activeLink {
+  color: cornflowerblue;
+}
+
+button {
+  background-color: #819ff5;
+  color: #ffffff;
+  height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 50pc;
+  outline: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+label {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+input,
+select {
+  border: 1px solid #819ff5;
+  height: 25px;
+  border-radius: 50pc;
+  outline: none;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+form {
+  width: 300px;
+  margin: 0 auto;
 }
