@@ -4,6 +4,16 @@ import { useForm } from 'react-hook-form';
 import { useSelector, useDispatch } from 'react-redux';
 import { allContacts } from "../../redux/selectors";
 import { addContact } from "../../redux/operations";
+import { Button } from "@material-ui/core";
+// import Icon from '@material-ui/core/Icon';
+import SaveIcon from '@material-ui/icons/Save';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+    button: {
+        margin: theme.spacing(1),
+    },
+}));
 
 export default function ContactForm() {
     const { register, handleSubmit, errors } = useForm();
@@ -11,6 +21,8 @@ export default function ContactForm() {
     const [number, setNumber] = useState('');
     const dispatch = useDispatch();
     const myNamesInItem = useSelector(allContacts);
+
+    const classes = useStyles();
 
     const reset = () => {
         setName('');
@@ -90,9 +102,19 @@ export default function ContactForm() {
                 <p className={style.warn}>There must be numbers</p>
             )}
 
-            <button type="submit" className={style.button}>
+            <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                className={classes.button}
+                startIcon={<SaveIcon />}
+            >
+                Save
+      </Button>
+
+            {/* <button type="submit" className={style.button}>
                 Add contact
-        </button>
+        </button> */}
         </form>
     );
 }

@@ -5,7 +5,7 @@ import { contactsFilter } from '../../redux/selectors';
 
 const Filter = ({ value, OnFilterContacts }) => {
     return (
-        <div classNames={style}><label>
+        <div style={{ margin: '10px auto', width: '400px' }} classNames={style}><label>
             Find contacts by name:
             <input
                 type="text"

@@ -6,6 +6,7 @@ import NavItem from "./NavItem";
 import { signOut } from "../../redux/auth/authActions";
 import PrivateRoute from "../routes/PrivateRoute";
 import PublicRoute from "../routes/PublicRoute";
+import { Button } from "@material-ui/core";
 
 const Navigation = () => {
     const isAuth = useSelector(state => state.auth.isAuth)
@@ -27,8 +28,12 @@ const Navigation = () => {
                         </NavLink> */}
                     </NavItem>
                 ))}
+                {isAuth && (
+                    <Button variant="contained" color="secondary" onClick={onHandleLogout}>LogOut
+                        {/* <button onClick={onHandleLogout}>LogOut</button> */}
+                    </Button>)}
             </ul>
-            <button onClick={onHandleLogout}>LogOut</button>
+            {/* <button onClick={onHandleLogout}>LogOut</button> */}
             <Suspense fallback={<h2>...loading</h2>}>
                 <Switch>
                     {mainRoutes.map((route) =>

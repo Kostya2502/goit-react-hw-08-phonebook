@@ -16,10 +16,10 @@ const PhonebookPage = () => {
     return (
         <>
             <CSSTransition in={true} classNames={style} appear={true} timeout={1000} unmountOnExit>
-                <h1>Phonebook</h1>
+                <h1 style={{ textAlign: 'center' }}>Phonebook</h1>
             </CSSTransition>
             <ContactForm />
-            <h2>Contacts</h2>
+            <h2 style={{ textAlign: 'center' }}>Contacts</h2>
             { (value.length > 0 || contacts.length > 1) && <Filter />}
             { loader && <LoaderSpinner />}
             <ContactList />

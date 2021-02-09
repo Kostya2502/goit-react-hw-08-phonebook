@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: #4aaec0;
-  background-image: url("./img/oblaka.jpg");
+  background-image: url("./img/blue.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -20,6 +20,7 @@ code {
 
 ul {
   list-style: none;
+  margin-left: 0;
 }
 
 .list {

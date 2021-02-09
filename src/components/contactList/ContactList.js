@@ -18,10 +18,10 @@ const ContactList = () => {
     const ondeleteContact = id => dispatch(deleteContact(id));
 
     return (
-        <TransitionGroup component='ul' >
+        <TransitionGroup component='ul' style={{ marginLeft: '0px' }} >
             {contacts.map(({ id, name, number }) => (
                 < CSSTransition key={id} timeout={400} classNames={style} >
-                    <li key={id} className={style.item}>
+                    <li style={{ margin: '10px auto', width: '400px' }} key={id} className={style.item}>
                         <p >
                             {name}: {number}
                         </p>
