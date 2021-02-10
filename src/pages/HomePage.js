@@ -12,6 +12,7 @@ export default class HomePage extends React.Component {
         this.audio = new Audio(this.url);
     }
 
+
     play = () => {
         this.setState({ play: true, pause: false })
         this.audio.play();
