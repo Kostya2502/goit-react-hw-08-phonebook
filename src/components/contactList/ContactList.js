@@ -6,7 +6,20 @@ import './ContactList.css';
 import { deleteContact, getContacts } from '../../redux/operations';
 import { filterContactsByName } from '../../redux/selectors';
 
+
+import Button from '@material-ui/core/Button';
+import { makeStyles } from '@material-ui/core/styles';
+import DeleteIcon from '@material-ui/icons/Delete';
+// import Icon from '@material-ui/core/Icon';
+
+const useStyles = makeStyles((theme) => ({
+    button: {
+        margin: theme.spacing(1),
+    },
+}));
+
 const ContactList = () => {
+    const classes = useStyles();
     const dispatch = useDispatch();
     const contacts = useSelector(filterContactsByName);
 
@@ -25,13 +38,23 @@ const ContactList = () => {
                         <p >
                             {name}: {number}
                         </p>
-                        <button
+                        <Button
+                            variant="contained"
+                            color="secondary"
+                            className={classes.button}
+                            startIcon={<DeleteIcon />}
+                            type="button"
+                            onClick={() => ondeleteContact(id)}
+                        >
+                            Delete
+                        </Button>
+                        {/* <button
                             type="button"
                             onClick={() => ondeleteContact(id)}
                             className={style.button}
                         >
                             Delete
-                        </button>
+                        </button> */}
                     </li>
                 </CSSTransition>
             ))

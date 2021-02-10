@@ -21,7 +21,8 @@ const PhonebookPage = () => {
             <ContactForm />
             <h2 style={{ textAlign: 'center' }}>Contacts</h2>
             { (value.length > 0 || contacts.length > 1) && <Filter />}
-            { loader && <LoaderSpinner />}
+            { loader && (<div class='loader-wrapper'><LoaderSpinner class='loader-wrapper' /></div>)}
+            {/* { loader && <LoaderSpinner class='loader-wrapper' />} */}
             <ContactList />
         </>
     );

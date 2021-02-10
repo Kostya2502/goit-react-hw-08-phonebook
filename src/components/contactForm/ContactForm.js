@@ -108,13 +108,11 @@ export default function ContactForm() {
                 size="large"
                 className={classes.button}
                 startIcon={<SaveIcon />}
+                type="submit"
             >
                 Save
       </Button>
 
-            {/* <button type="submit" className={style.button}>
-                Add contact
-        </button> */}
         </form>
     );
 }

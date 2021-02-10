@@ -34,7 +34,8 @@ const Navigation = () => {
                     </Button>)}
             </ul>
             {/* <button onClick={onHandleLogout}>LogOut</button> */}
-            <Suspense fallback={<h2>...loading</h2>}>
+            {/* <Suspense fallback={<h2>...loading</h2>}> */}
+            <Suspense fallback={<></>}>
                 <Switch>
                     {mainRoutes.map((route) =>
                         route.isPrivate ? (<PrivateRoute {...route} isAuth={isAuth} key={route.path} />)
